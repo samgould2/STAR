@@ -1,0 +1,6 @@
+pegRNA_R248P
+pegRNA_R196P
+pegRNA_A347P
+pegRNA_I254_I255insH
+pegRNA_E258E
+PEmax_P2A_Puro

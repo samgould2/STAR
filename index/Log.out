@@ -1,0 +1,74 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir= :/Users/distiller/project/STARcompile/source
+STAR git: On branch master ; commit 73eaeb256684a2fc31ce306a95bbd27120dd8de4 ; diff files: 
+##### Command Line:
+/Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR --runThreadN 4 --runMode genomeGenerate --genomeDir /Users/samgould/Documents/GitHub/STAR/index --genomeFastaFiles pegs_pemax.fasta --genomeSAindexNbases 6 --limitBAMsortRAM 40000000000
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    4     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     /Users/samgould/Documents/GitHub/STAR/index     ~RE-DEFINED
+genomeFastaFiles              pegs_pemax.fasta        ~RE-DEFINED
+genomeSAindexNbases           6     ~RE-DEFINED
+limitBAMsortRAM               40000000000     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        4
+genomeDir                         /Users/samgould/Documents/GitHub/STAR/index
+genomeFastaFiles                  pegs_pemax.fasta   
+genomeSAindexNbases               6
+limitBAMsortRAM                   40000000000
+
+-------------------------------
+##### Final effective command line:
+/Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR   --runMode genomeGenerate      --runThreadN 4   --genomeDir /Users/samgould/Documents/GitHub/STAR/index   --genomeFastaFiles pegs_pemax.fasta      --genomeSAindexNbases 6   --limitBAMsortRAM 40000000000
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory created: /Users/samgould/Documents/GitHub/STAR/index/
+May 14 12:33:12 ... starting to generate Genome files
+pegs_pemax.fasta : chr # 0  "pegRNA_R248P" chrStart: 0
+pegs_pemax.fasta : chr # 1  "pegRNA_R196P" chrStart: 262144
+pegs_pemax.fasta : chr # 2  "pegRNA_A347P" chrStart: 524288
+pegs_pemax.fasta : chr # 3  "pegRNA_I254_I255insH" chrStart: 786432
+pegs_pemax.fasta : chr # 4  "pegRNA_E258E" chrStart: 1048576
+pegs_pemax.fasta : chr # 5  "PEmax_P2A_Puro" chrStart: 1310720
+Chromosome sequence lengths: 
+pegRNA_R248P	804
+pegRNA_R196P	799
+pegRNA_A347P	804
+pegRNA_I254_I255insH	789
+pegRNA_E258E	809
+PEmax_P2A_Puro	8322
+Genome sequence total length = 12327
+Genome size with padding = 1572864
+!!!!! WARNING: --genomeSAindexNbases 6 is too large for the genome size=12327, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 5
+Estimated genome size with padding and SJs: total=genome+SJ=202572864 = 1572864 + 201000000
+GstrandBit=32
+Number of SA indices: 24654
+May 14 12:33:12 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 4;   chunks size limit: 65744 bytes
+May 14 12:33:12 ... sorting Suffix Array chunks and saving them to disk...
+Writing 1104 bytes into /Users/samgould/Documents/GitHub/STAR/index//SA_3 ; empty space on disk = 306988224348160 bytes ... done
+Writing 65216 bytes into /Users/samgould/Documents/GitHub/STAR/index//SA_0 ; empty space on disk = 306988223299584 bytes ... done
+Writing 65608 bytes into /Users/samgould/Documents/GitHub/STAR/index//SA_1 ; empty space on disk = 306988206522368 bytes ... done
+Writing 65304 bytes into /Users/samgould/Documents/GitHub/STAR/index//SA_2 ; empty space on disk = 306988188696576 bytes ... done
+May 14 12:33:12 ... loading chunks from disk, packing SA...
+May 14 12:33:12 ... finished generating suffix array
+May 14 12:33:12 ... generating Suffix Array index
+May 14 12:33:12 ... completed Suffix Array index
+May 14 12:33:12 ... writing Genome to disk ...
+Writing 1572864 bytes into /Users/samgould/Documents/GitHub/STAR/index//Genome ; empty space on disk = 306988223299584 bytes ... done
+SA size in bytes: 101701
+May 14 12:33:12 ... writing Suffix Array to disk ...
+Writing 101701 bytes into /Users/samgould/Documents/GitHub/STAR/index//SA ; empty space on disk = 306987820646400 bytes ... done
+May 14 12:33:12 ... writing SAindex to disk
+Writing 8 bytes into /Users/samgould/Documents/GitHub/STAR/index//SAindex ; empty space on disk = 306987794432000 bytes ... done
+Writing 56 bytes into /Users/samgould/Documents/GitHub/STAR/index//SAindex ; empty space on disk = 306987794432000 bytes ... done
+Writing 23891 bytes into /Users/samgould/Documents/GitHub/STAR/index//SAindex ; empty space on disk = 306987794432000 bytes ... done
+May 14 12:33:12 ..... finished successfully
+DONE: Genome generation, EXITING

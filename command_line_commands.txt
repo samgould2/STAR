@@ -1,0 +1,44 @@
+#List of commands for running various tasks
+
+
+#1. generating genome indeces
+
+/Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR --runThreadN 4 --runMode genomeGenerate --genomeDir /Users/samgould/Documents/GitHub/STAR/index --genomeFastaFiles pegs_pemax.fasta --genomeSAindexNbases 6 --limitBAMsortRAM 40000000000 
+
+#--sjdbOverhang parameter = read length-1 (150 PE reads; parameter = 149)
+# here it equals (np.log2(12327)/2) - 1
+#in this case I need to scale down the --genomeSAindexNbases parameter to be equal to min(14, (np.log2(Genome_length)/2)-1)
+    # would need to be changed in other scenarios
+
+#Had to modify this because of the following command:
+#EXITING because of FATAL INPUT PARAMETER ERROR: when generating genome without annotations (--sjdbFileChrStartEnd or --sjdbGTFfile options)
+do not specify >0 --sjdbOverhang
+SOLUTION: re-run genome generation without --sjdbOverhang option
+
+
+#now index is made
+#2. working on generating the alignments
+
+#going to start with 
+
+/Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR --genomeDir /Users/samgould/Documents/GitHub/STAR/index --runThreadN 6 -- readFilesIn /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_1_sequence.fastq /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_2_sequence.fastq --outFileNamePrefix R196P_19_high_5696_1
+
+
+#3. convert SAM file to BAM file for ease of manipulation
+
+/Users/samgould/samtools_install/bin/samtools view -S -b R196P_19_high_5696_1Aligned.out.sam > R196P_19_high_5696_1Aligned.out.bam
+
+/Users/samgould/samtools_install/bin/samtools sort -o R196P_19_high_5696_1Aligned.out.sorted.bam R196P_19_high_5696_1Aligned.out.bam
+/Users/samgould/samtools_install/bin/samtools index R196P_19_high_5696_1Aligned.out.sorted.bam
+
+
+
+#and filtering out the non-uniquely mapped reads
+#trying this (filtering MAPQ != 255)
+/Users/samgould/samtools_install/bin/samtools view -bSq 255 R196P_19_high_5696_1Aligned.out.sorted.bam > R196P_19_high_5696_1Aligned_unique_only.out.sorted.bam
+
+#and have to reindex it
+/Users/samgould/samtools_install/bin/samtools index R196P_19_high_5696_1Aligned_unique_only.out.sorted.bam
+
+
+

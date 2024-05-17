@@ -1,0 +1,19 @@
+### /Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR   --runMode genomeGenerate      --runThreadN 4   --genomeDir /Users/samgould/Documents/GitHub/STAR/index   --genomeFastaFiles pegs_pemax.fasta      --genomeSAindexNbases 6   --limitBAMsortRAM 40000000000
+### GstrandBit 32
+versionGenome	2.7.4a
+genomeType	Full
+genomeFastaFiles	pegs_pemax.fasta 
+genomeSAindexNbases	6
+genomeChrBinNbits	18
+genomeSAsparseD	1
+genomeTransformType	None
+genomeTransformVCF	-
+sjdbOverhang	0
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	-
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	1572864 101701

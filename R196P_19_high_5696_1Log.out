@@ -1,0 +1,99 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir= :/Users/distiller/project/STARcompile/source
+STAR git: On branch master ; commit 73eaeb256684a2fc31ce306a95bbd27120dd8de4 ; diff files: 
+##### Command Line:
+/Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR --genomeDir /Users/samgould/Documents/GitHub/STAR/index --runThreadN 6 -- readFilesIn /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_1_sequence.fastq /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_2_sequence.fastq --outFileNamePrefix R196P_19_high_5696_1
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 R196P_19_high_5696_1
+###### All USER parameters from Command Line:
+genomeDir                     /Users/samgould/Documents/GitHub/STAR/index     ~RE-DEFINED
+runThreadN                    6     ~RE-DEFINED
+readFilesIn                   /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_1_sequence.fastq   /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_2_sequence.fastq        ~RE-DEFINED
+outFileNamePrefix             R196P_19_high_5696_1     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        6
+genomeDir                         /Users/samgould/Documents/GitHub/STAR/index
+readFilesIn                       /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_1_sequence.fastq   /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_2_sequence.fastq   
+outFileNamePrefix                 R196P_19_high_5696_1
+
+-------------------------------
+##### Final effective command line:
+/Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR   --runThreadN 6   --genomeDir /Users/samgould/Documents/GitHub/STAR/index   --readFilesIn /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_1_sequence.fastq   /Volumes/sanchezrivera/samgould/240403San/D24-5696-1-6721S/240403San_D24-5696-1_2_sequence.fastq      --outFileNamePrefix R196P_19_high_5696_1
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /Users/samgould/Documents/GitHub/STAR/bin/MacOSX_x86_64/STAR   --runMode genomeGenerate      --runThreadN 4   --genomeDir /Users/samgould/Documents/GitHub/STAR/index   --genomeFastaFiles pegs_pemax.fasta      --genomeSAindexNbases 6   --limitBAMsortRAM 40000000000
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              pegs_pemax.fasta        ~RE-DEFINED
+genomeSAindexNbases           6     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  0     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   -     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               1572864   101701        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 6
+1	pegRNA_R248P	804	0
+2	pegRNA_R196P	799	262144
+3	pegRNA_A347P	804	524288
+4	pegRNA_I254_I255insH	789	786432
+5	pegRNA_E258E	809	1048576
+6	PEmax_P2A_Puro	8322	1310720
+Started loading the genome: Tue May 14 12:39:29 2024
+
+Genome: size given as a parameter = 1572864
+SA: size given as a parameter = 101701
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=6  nSAi=5460
+nGenome=1572864;  nSAbyte=101701
+GstrandBit=32   SA number of indices=24654
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 1572864 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 1572864 bytes
+SA file size: 101701 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 101701 bytes
+Loading SAindex ... done: 23955 bytes
+Finished loading the genome: Tue May 14 12:39:29 2024
+
+Sum of all Genome bytes: 7820369
+Sum of all SA bytes: 8277866
+Sum of all SAi bytes: 1250814
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Thread #3 end of input stream, nextChar=-1
+Completed: thread #4
+Completed: thread #2
+Completed: thread #3
+Completed: thread #0
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Completed: thread #5
+Joined thread # 5
+May 14 12:44:47 ..... finished mapping
+RAM after mapping:
+
+RAM after freeing genome index memory:
+
+ALL DONE!
